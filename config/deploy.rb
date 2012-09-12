@@ -2,6 +2,7 @@
 default_run_options[:pty] = true                    # I had to add this so it would prompt for a password
 require "bundler/capistrano"                        # Add bundle install to deploy task
 load 'deploy/assets'                                # Link the folder specified in config.assets.prefix to shared/assets
+set :deploy_via, :remote_cache
 
 # APPLICATION
 set  :application, "EagleEco"
